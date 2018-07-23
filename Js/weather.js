@@ -42,6 +42,13 @@ $.getJSON(api,function(data){
      });
     windSpeed = (2.237*(windSpeed)).toFixed(1);
     $("#windSpeed").html(windSpeed + "mph");
+    if(fariTemp > 80){
+       $('body').css('background-image','url(https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c3173da6dc330f4f4073b411732825f0&auto=format&fit=crop&w=750&q=80)'); 
+    }
+    else if(fariTemp > 70){
+        $('body').css('background-image','url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca4c0c8dc291ec21f61ba16256362474&auto=format&fit=crop&w=667&q=80)'); 
+        
+    }
     
 });
 });
