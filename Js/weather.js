@@ -20,28 +20,28 @@ $.getJSON(api,function(data){
     var kelvin = data.main.temp;
     var windSpeed = data.wind.speed;
     var city = data.name;
-    fariTemp = (kelvin)*(9/5)-459.67;
-    celsiTemp = kelvin-273;
+    fariTemp = ((kelvin)*(9/5)-459.67).toFixed(1);
+    celsiTemp = (kelvin-273).toFixed(1);
     
     console.log(city);
     $("#city").html(api);
     $("#weatherType").html(weatherType);
-    $("#fariTemp").html(fariTemp);
+    $("#fariTemp").html(fariTemp + " &#8457;");
      $("#fariTemp").click(function(){
          
         if(tempSwap===false){
-             $("#fariTemp").html(celsiTemp);
+            $("#fariTemp").html(fariTemp + " &#8457;");
             tempSwap=true;
         } 
          else{
-             
-              $("#fariTemp").html(fariTemp);
+             $("#fariTemp").html(celsiTemp + " &#8451;");
              tempSwap=false;
          }
          
          
      });
-    $("#windSpeed").html(windSpeed);
+    windSpeed = (2.237*(windSpeed)).toFixed(1);
+    $("#windSpeed").html(windSpeed + "mph");
     
 });
 });
