@@ -1,21 +1,18 @@
-$(document).ready(function() {
-    var longi;
-    var lati;
-    var fariTemp;
-    var celsiTemp;
- if (navigator.geolocation) {
-
-  navigator.geolocation.getCurrentPosition(function(position){
-longi = position.coords.longitude;
-      lati = position.coords.latitude;
-  $("#data").html("Latitude: " + lati + "<br/>" + "Longitude: " + longi);
-    });  
-  }
-var api = 'https://samples.openweathermap.org/data/2.5/weather?lat='+lati+'&lon='+longi+'&appid=b6907d289e10d714a6e88b30761fae22';
+$(document).ready(function(){
+    
+var longi;
+var lati;
+    $.getJSON("http://ip-api.com/json",function(data2){
+        
+       lati = data2.lat;
+        longi = data2.lon;
+        var api ='http://api.openweathermap.org/data/2.5/weather?lat='+lati+'&lon='+longi+'&appid=5886b24c9277f5285b48a6ab03284cf8';
     
 $.getJSON(api,function(data){
     var tempSwap=true;
 //alert(data.coord.lat);
+    var fariTemp;
+    var celsiTemp;
     var weatherType = data.weather[0].description;
     var kelvin = data.main.temp;
     var windSpeed = data.wind.speed;
@@ -51,4 +48,8 @@ $.getJSON(api,function(data){
     }
     
 });
+    
+    });
+
+
 });
