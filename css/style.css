@@ -3,3 +3,17 @@ body{
     background-size: cover;
     
 }
+
+.list-unstyled{
+    
+    display: inline-flex;
+    margin: auto;
+   
+    
+}
+
+.list-unstyled li{
+    padding:10px;
+    
+    
+}
