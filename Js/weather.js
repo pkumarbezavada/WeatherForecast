@@ -39,13 +39,45 @@ $.getJSON(api,function(data){
      });
     windSpeed = (2.237*(windSpeed)).toFixed(1);
     $("#windSpeed").html(windSpeed + "mph");
-    if(fariTemp > 80){
-       $('body').css('background-image','url(https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c3173da6dc330f4f4073b411732825f0&auto=format&fit=crop&w=750&q=80)'); 
+    if(weatherType === "mist"){
+       $('body').css('background-image','url(https://media.giphy.com/media/l3q2GlX2MQPibz8bu/giphy.gif)'); 
     }
-    else if(fariTemp > 60){
-        $('body').css('background-image','url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca4c0c8dc291ec21f61ba16256362474&auto=format&fit=crop&w=667&q=80)'); 
+    else if(weatherType === "sunny"){
+        $('body').css('background-image','url(https://zippy.gfycat.com/RingedConfusedAfricanbushviper.gif)'); 
         
     }
+    
+    else if(weatherType === "cloudy"){
+        $('body').css('background-image','url(https://i.gifer.com/7RtX.gif)'); 
+        
+    }
+    
+      else if(weatherType === "rainy"){
+        $('body').css('background-image','url(https://78.media.tumblr.com/2512ece31dddfe2fafd7001fd2143f74/tumblr_o94v6ypp2m1upvbufo1_400.gif)'); 
+        
+    }
+    
+    else if(weatherType === "lightning"){
+        $('body').css('background-image','url(https://media.giphy.com/media/hAb5yLCOJn7NK/source.gif)'); 
+        
+    }
+    
+    
+   else if(weatherType === "snow"){
+        $('body').css('background-image','url(https://media.giphy.com/media/Yy26NRbpB9lDi/giphy.gif)'); 
+        
+    } 
+    
+    else if(weatherType === "tornado"){
+        $('body').css('background-image','url(https://media.giphy.com/media/UIbf99Ufh9LMY/giphy.gif)'); 
+        
+    } 
+    
+    else {
+        $('body').css('background-image','url(https://cdn.dribbble.com/users/224485/screenshots/1953696/weathernew.gif)'); 
+        
+    }
+    
     
 });
     
