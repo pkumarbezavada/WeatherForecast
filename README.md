@@ -1,2 +1,2 @@
 # Weather Forecast
-Technologies Used: Html5,Css3,Bootstrap4,Javascript
+Technologies Used: Html5,Css3,Bootstrap4,Javascript,OpenWeatherMap Api,Ip-Api.
