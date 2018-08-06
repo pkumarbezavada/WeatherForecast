@@ -72,11 +72,21 @@ $.getJSON(api,function(data){
         $('body').css('background-image','url(https://media.giphy.com/media/UIbf99Ufh9LMY/giphy.gif)'); 
         
     } 
+ else if(weatherType === "tornado"){
+        $('body').css('background-image','url(https://patch.com/california/altadena/cooler-temps-scattered-clouds-store-altadena)'); 
+        
+    } 
+   
+     else if(weatherType === "smoke"){
+        $('body').css('background-image','url(https://i.imgur.com/aEkNo6T.jpg)'); 
+        
+    } 
     
     else {
         $('body').css('background-image','url(https://cdn.dribbble.com/users/224485/screenshots/1953696/weathernew.gif)'); 
         
     }
+    
     
     
 });
