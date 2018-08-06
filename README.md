@@ -1,2 +1,2 @@
-# WeatherForecast
-Developed using HTML5,CSS3,JAVASCRIPT,GOOGLE API
+# Weather Forecast
+Technologies Used: Html5,Css3,Bootstrap4,Javascript,OpenWeatherMap Api,Ip-Api.
